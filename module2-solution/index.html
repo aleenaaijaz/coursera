@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
+
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+p {
+  border: 1px solid black;
+  
+  width: 20%;
+  height: 30px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: auto;
+  font-family: Helvetica;
+  color: white;
+}
+#p1{
+  background-color: powderblue;
+}
+#p2{
+  background-color: #ff944d;
+}
+#p3{
+  background-color: #d2ff4d;
+}
+body{
+  text-align: center;
+
+}
+#div1{
+  background-color: #00FFFF;
+  position: relative;
+  top: 60px;
+  padding-right: 10px;
+
+}
+
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+
+}
+
+/********** desktop devices only **********/
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3  {
+    float: left;
+    border: 1px solid black;
+    border-spacing: 10px;
+    
+    background-color: #d9b3ff;
+
+  }
+  .col-lg-1 {
+    width: 16.33%;
+    
+
+  }
+  .col-lg-2 {
+    width: 16.66%;
+    
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  
+}
+
+
+
+/********** Tablet devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3 {
+    float: top;
+    border: 1px solid green;
+  }
+  .col-md-1 {
+    width: 16.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  
+}
+/********** Mobile devices only **********/
+@media (max-width: 767){
+  .col-md-1, .col-md-2, .col-md-3 {
+    float: left;
+    border: 1px solid blue;
+  }
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<h1>*OUR MENU*</h1>
+<center>
+<div class="row" id="div1" >
+  <section>
+  <div class="col-lg-3 col-md-6" ><p id="p1">Chicken</p>
+    <div> I Love Chicken </div></div></section>
+    <section>
+      <div class="col-lg-3 col-md-6"><p id="p2">Beef</p>
+    <div >I love Beef</div></div>
+    </section>
+  <section>
+    <div class="col-lg-3 col-md-6"><p id="p3">Sushi</p>
+    <div>I Dont like sushi </div></div>
+  </section>
+  
+  
+</div>
+</center>
+
+</body>
+</html>
